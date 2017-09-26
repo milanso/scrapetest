@@ -5,7 +5,7 @@ import re
  
 class MySpider(Spider):
   name = "scrapetest"
-  allowed_domains   = ["code.tutsplus.com"]
+  allowed_domains   = []
   start_urls = ["http://code.tutsplus.com/"]
  
   def parse(self, response):
