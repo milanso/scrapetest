@@ -9,7 +9,7 @@ class MySpider(Spider):
   start_urls = ["http://code.tutsplus.com/"]
  
   def parse(self, response):
-    links = response.xpath('//a/@href').extract()
+    emails = re.findall(r'[\w\.-]+@[\w\.-]+', response.body).extract()
  
     # We stored already crawled links in this list
     crawledLinks = []
